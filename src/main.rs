@@ -35,7 +35,7 @@ fn evaluate(array: Vec<Primitive>) -> i32 {
                 // *val - folded
 
                 let prims: Vec::<Primitive> = iter.map(|x| *x).collect();
-                let mut flat = vec![vec![Primitive::Add], prims];
+                let flat = vec![vec![Primitive::Add], prims];
                 let coll: Vec::<&Primitive> = flat.iter().flatten().collect();
                 let c2 = coll.iter().map(|x| **x);
                 val - evaluate(c2.collect())
